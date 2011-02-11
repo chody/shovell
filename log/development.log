@@ -145,3 +145,577 @@ Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 09:51:28) [GET]
   Parameters: {"action"=>"index", "controller"=>"stories"}
 Rendering stories/index
 Completed in 0.00149 (669 reqs/sec) | Rendering: 0.00071 (47%) | DB: 0.00000 (0%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 15:20:23) [GET]
+  Session ID: f863d36fd6abdfe9928d00e9141615d0
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+Rendering stories/index
+Completed in 0.00198 (503 reqs/sec) | Rendering: 0.00108 (54%) | DB: 0.00000 (0%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 15:30:24) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+Rendering stories/index
+Completed in 0.00147 (681 reqs/sec) | Rendering: 0.00068 (46%) | DB: 0.00000 (0%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 15:31:42) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+Rendering stories/index
+Completed in 0.00144 (693 reqs/sec) | Rendering: 0.00066 (45%) | DB: 0.00000 (0%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 15:31:46) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+Rendering stories/index
+Completed in 0.00118 (846 reqs/sec) | Rendering: 0.00038 (32%) | DB: 0.00000 (0%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 15:35:55) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+Rendering stories/index
+Completed in 0.00146 (685 reqs/sec) | Rendering: 0.00068 (46%) | DB: 0.00000 (0%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 15:41:02) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000299)[0m   [0;1mSELECT * FROM stories [0m
+Rendering stories/index
+Completed in 0.02612 (38 reqs/sec) | Rendering: 0.00067 (2%) | DB: 0.00030 (1%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 15:41:03) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000237)[0m   [0mSELECT * FROM stories [0m
+Rendering stories/index
+Completed in 0.00299 (334 reqs/sec) | Rendering: 0.00038 (12%) | DB: 0.00024 (7%) | 200 OK [http://localhost/stories]
+  [4;36;1mStory Create (0.000274)[0m   [0;1mINSERT INTO stories ("name", "created_at", "updated_at", "link") VALUES('SitePoint Forums', '2011-02-11 15:43:52', '2011-02-11 15:43:52', 'http://www.sitepoint.com/forums')[0m
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 15:48:10) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000110)[0m   [0;1mSELECT * FROM stories WHERE (stories."name" = 'SitePoint Forums') LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00443 (225 reqs/sec) | Rendering: 0.00127 (28%) | DB: 0.00011 (2%) | 200 OK [http://localhost/stories]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-11 15:48:54) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/s" with {:method=>:get}):
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1441:in `recognize_path'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1424:in `recognize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing InfoController#properties (for 127.0.0.1 at 2011-02-11 15:49:05) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"properties", "controller"=>"rails/info"}
+  [4;35;1mSQL (0.000241)[0m   [0mSELECT version FROM schema_info[0m
+Completed in 0.03314 (30 reqs/sec) | Rendering: 0.00047 (1%) | DB: 0.00024 (0%) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 15:49:13) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000106)[0m   [0;1mSELECT * FROM stories WHERE (stories."name" = 'SitePoint Forums') LIMIT 1[0m
+Rendering stories/index
+Completed in 0.03188 (31 reqs/sec) | Rendering: 0.00075 (2%) | DB: 0.00011 (0%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:02:25) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000118)[0m   [0;1mSELECT * FROM stories WHERE (stories."name" = 'SitePoint Forums') LIMIT 1[0m
+Rendering stories/index
+Completed in 0.01059 (94 reqs/sec) | Rendering: 0.00125 (11%) | DB: 0.00012 (1%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:04:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000105)[0m   [0mSELECT * FROM stories WHERE (stories."name" = 'SitePoint Forums') LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00393 (254 reqs/sec) | Rendering: 0.00092 (23%) | DB: 0.00010 (2%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:10:10) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000318)[0m   [0;1mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00417 (239 reqs/sec) | Rendering: 0.00106 (25%) | DB: 0.00032 (7%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:10:16) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000257)[0m   [0mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00361 (277 reqs/sec) | Rendering: 0.00095 (26%) | DB: 0.00026 (7%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:10:52) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000271)[0m   [0;1mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00385 (260 reqs/sec) | Rendering: 0.00121 (31%) | DB: 0.00027 (7%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:11:04) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000255)[0m   [0mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00373 (268 reqs/sec) | Rendering: 0.00101 (27%) | DB: 0.00025 (6%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:11:05) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000275)[0m   [0;1mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00372 (268 reqs/sec) | Rendering: 0.00099 (26%) | DB: 0.00028 (7%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:11:05) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000252)[0m   [0mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00358 (279 reqs/sec) | Rendering: 0.00101 (28%) | DB: 0.00025 (7%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:11:06) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000266)[0m   [0;1mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00359 (278 reqs/sec) | Rendering: 0.00101 (28%) | DB: 0.00027 (7%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:11:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000277)[0m   [0mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00366 (273 reqs/sec) | Rendering: 0.00105 (28%) | DB: 0.00028 (7%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:11:09) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000261)[0m   [0;1mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00362 (276 reqs/sec) | Rendering: 0.00097 (26%) | DB: 0.00026 (7%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:11:10) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000265)[0m   [0mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00362 (275 reqs/sec) | Rendering: 0.00105 (28%) | DB: 0.00026 (7%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:11:10) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000254)[0m   [0;1mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00354 (282 reqs/sec) | Rendering: 0.00099 (27%) | DB: 0.00025 (7%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:11:11) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000247)[0m   [0mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00357 (280 reqs/sec) | Rendering: 0.00100 (27%) | DB: 0.00025 (6%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:11:12) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000281)[0m   [0;1mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00372 (268 reqs/sec) | Rendering: 0.00103 (27%) | DB: 0.00028 (7%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:11:13) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000286)[0m   [0mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00374 (267 reqs/sec) | Rendering: 0.00100 (26%) | DB: 0.00029 (7%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:11:14) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000277)[0m   [0;1mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.03203 (31 reqs/sec) | Rendering: 0.00098 (3%) | DB: 0.00028 (0%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:27:12) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+Rendering stories/index
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #2 of stories/index.html.erb:
+1: A random link:
+2: <%= link_to @story.name, @story.link %>
+3: <%= @time %>
+    app/views/stories/index.html.erb:2:in `_run_erb_47app47views47stories47index46html46erb'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1153:in `default_render'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1159:in `perform_action_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:27:47) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000275)[0m   [0mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00379 (263 reqs/sec) | Rendering: 0.00100 (26%) | DB: 0.00027 (7%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:28:06) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000271)[0m   [0;1mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.03528 (28 reqs/sec) | Rendering: 0.00100 (2%) | DB: 0.00027 (0%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:28:31) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000310)[0m   [0mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00398 (251 reqs/sec) | Rendering: 0.00122 (30%) | DB: 0.00031 (7%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:28:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000269)[0m   [0;1mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00377 (264 reqs/sec) | Rendering: 0.00099 (26%) | DB: 0.00027 (7%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:29:00) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000271)[0m   [0mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00382 (261 reqs/sec) | Rendering: 0.00116 (30%) | DB: 0.00027 (7%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:29:27) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000285)[0m   [0;1mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00403 (248 reqs/sec) | Rendering: 0.00116 (28%) | DB: 0.00029 (7%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:29:44) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000280)[0m   [0mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00416 (240 reqs/sec) | Rendering: 0.00122 (29%) | DB: 0.00028 (6%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:29:45) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000251)[0m   [0;1mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00383 (261 reqs/sec) | Rendering: 0.00100 (26%) | DB: 0.00025 (6%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:29:59) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000267)[0m   [0mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00395 (253 reqs/sec) | Rendering: 0.00120 (30%) | DB: 0.00027 (6%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:30:28) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000254)[0m   [0;1mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00376 (265 reqs/sec) | Rendering: 0.00118 (31%) | DB: 0.00025 (6%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:30:39) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000299)[0m   [0mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00420 (238 reqs/sec) | Rendering: 0.00119 (28%) | DB: 0.00030 (7%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 16:31:31) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000274)[0m   [0;1mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.00381 (262 reqs/sec) | Rendering: 0.00114 (29%) | DB: 0.00027 (7%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#new (for 127.0.0.1 at 2011-02-11 16:39:40) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"new", "controller"=>"stories"}
+Rendering stories/new
+
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of stories/new.html.erb:
+1: <% form_for @story do |f|%>
+2: 	<p>
+3: 		name: <br />
+4: 		<%= f.text_field :name %>
+
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/record_identifier.rb:66:in `dom_id'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/record_identification_helper.rb:16:in `dom_id'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/form_helper.rb:195:in `apply_form_for_options!'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/form_helper.rb:179:in `form_for'
+    app/views/stories/new.html.erb:1:in `_run_erb_47app47views47stories47new46html46erb'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1153:in `default_render'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1164:in `perform_action_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StoriesController#new (for 127.0.0.1 at 2011-02-11 16:43:02) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"new", "controller"=>"stories"}
+Rendering stories/new
+
+
+ActionView::TemplateError (undefined method `stories_path' for #<ActionView::Base:0x1021993c8>) on line #1 of stories/new.html.erb:
+1: <% form_for @story do |f|%>
+2: 	<p>
+3: 		name: <br />
+4: 		<%= f.text_field :name %>
+
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/polymorphic_routes.rb:27:in `send!'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/polymorphic_routes.rb:27:in `polymorphic_url'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/polymorphic_routes.rb:31:in `polymorphic_path'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/form_helper.rb:200:in `apply_form_for_options!'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/form_helper.rb:179:in `form_for'
+    app/views/stories/new.html.erb:1:in `_run_erb_47app47views47stories47new46html46erb'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1153:in `default_render'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1159:in `perform_action_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StoriesController#new (for 127.0.0.1 at 2011-02-11 16:52:06) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"new", "controller"=>"stories"}
+Rendering stories/new
+Completed in 0.00390 (256 reqs/sec) | Rendering: 0.00136 (34%) | DB: 0.00000 (0%) | 200 OK [http://localhost/stories/new]
