@@ -1,6 +1,6 @@
 class CreateStories < ActiveRecord::Migration
   def self.up
-    create_table :stories do |t|
+    create_table :stories, :force => true do |t|
       t.string :name
       t.string :link
 

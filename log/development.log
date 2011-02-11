@@ -1,0 +1,147 @@
+  [4;36;1mSQL (0.000120)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.001767)[0m   [0mCREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.001358)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000088)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateStories (1)
+  [4;35;1mSQL (0.001524)[0m   [0mDROP TABLE stories[0m
+  [4;36;1mSQL (0.001402)[0m   [0;1mCREATE TABLE stories ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) DEFAULT NULL, "link" varchar(255) DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;35;1mSQL (0.001097)[0m   [0mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000087)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000093)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000029)[0m   [0;1mPRAGMA index_list(stories)[0m
+  [4;36;1mStory Create (0.000451)[0m   [0;1mINSERT INTO stories ("name", "created_at", "updated_at", "link") VALUES('My shiny weblog.', '2011-02-11 08:41:51', '2011-02-11 08:41:51', 'http://poocs.net')[0m
+  [4;35;1mSQL (0.000153)[0m   [0mSELECT count(*) AS count_all FROM stories [0m
+  [4;36;1mStory Create (0.000372)[0m   [0;1mINSERT INTO stories ("name", "created_at", "updated_at", "link") VALUES(NULL, '2011-02-11 08:44:50', '2011-02-11 08:44:50', NULL)[0m
+  [4;35;1mSQL (0.000178)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mStory Create (0.000453)[0m   [0;1mINSERT INTO stories ("name", "created_at", "updated_at", "link") VALUES('SitePoint Forums', '2011-02-11 08:46:24', '2011-02-11 08:46:24', 'http://www.sitepoint.com/forums.')[0m
+  [4;35;1mStory Load (0.000196)[0m   [0mSELECT * FROM stories [0m
+  [4;36;1mStory Load (0.000291)[0m   [0;1mSELECT * FROM stories [0m
+  [4;35;1mStory Load (0.000266)[0m   [0mSELECT * FROM stories [0m
+  [4;36;1mStory Load (0.000178)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 2) [0m
+  [4;35;1mStory Load (0.000168)[0m   [0mSELECT * FROM stories WHERE (stories."id" = 3) [0m
+  [4;36;1mStory Load (0.000207)[0m   [0;1mSELECT * FROM stories [0m
+  [4;35;1mStory Load (0.000194)[0m   [0mSELECT * FROM stories [0m
+  [4;36;1mStory Load (0.000177)[0m   [0;1mSELECT * FROM stories ORDER BY id DESC LIMIT 1[0m
+  [4;35;1mStory Load (0.000140)[0m   [0mSELECT * FROM stories WHERE (stories."id" = 0) [0m
+  [4;36;1mStory Load (0.000137)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 0) [0m
+  [4;35;1mStory Load (0.000173)[0m   [0mSELECT * FROM stories WHERE (stories."name" = 'My shiny weblog.') LIMIT 1[0m
+  [4;36;1mStory Load (0.000191)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 2) [0m
+  [4;35;1mStory Load (0.000169)[0m   [0mSELECT * FROM stories WHERE (stories."id" = 2) [0m
+  [4;36;1mStory Load (0.000167)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 2) [0m
+  [4;35;1mStory Load (0.000176)[0m   [0mSELECT * FROM stories WHERE (stories."id" = 2) [0m
+  [4;36;1mStory Update (0.000299)[0m   [0;1mUPDATE stories SET "updated_at" = '2011-02-11 09:06:47', "created_at" = '2011-02-11 08:44:50', "name" = 'Testing', "link" = NULL WHERE "id" = 2[0m
+  [4;35;1mStory Load (0.000180)[0m   [0mSELECT * FROM stories WHERE (stories."id" = 2) [0m
+  [4;36;1mStory Load (0.000141)[0m   [0;1mSELECT * FROM stories WHERE (stories."name" = 'Testiing') LIMIT 1[0m
+  [4;35;1mStory Load (0.000151)[0m   [0mSELECT * FROM stories WHERE (stories."id" = 2) [0m
+  [4;36;1mStory Load (0.000178)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 2) [0m
+  [4;35;1mStory Load (0.000232)[0m   [0mSELECT * FROM stories [0m
+  [4;36;1mStory Load (0.000177)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 2) [0m
+  [4;35;1mStory Update (0.000380)[0m   [0mUPDATE stories SET "updated_at" = '2011-02-11 09:09:26', "created_at" = '2011-02-11 08:44:50', "name" = 'Testing', "link" = 'http://www.testthis.com' WHERE "id" = 2[0m
+  [4;36;1mStory Load (0.000230)[0m   [0;1mSELECT * FROM stories [0m
+  [4;35;1mStory Load (0.000169)[0m   [0mSELECT * FROM stories WHERE (stories."name" = 'My shiny weblog.') LIMIT 1[0m
+  [4;36;1mStory Update (0.000404)[0m   [0;1mUPDATE stories SET "updated_at" = '2011-02-11 09:11:01', "created_at" = '2011-02-11 08:41:51', "name" = 'A weblog about Ruby on Rails', "link" = 'http://poocs.net' WHERE "id" = 1[0m
+  [4;35;1mStory Load (0.000221)[0m   [0mSELECT * FROM stories [0m
+  [4;36;1mStory Load (0.000175)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 2) [0m
+  [4;35;1mStory Update (0.000433)[0m   [0mUPDATE stories SET "updated_at" = '2011-02-11 09:12:33', "created_at" = '2011-02-11 08:44:50', "name" = 'Test This', "link" = 'http://www.testthis.com' WHERE "id" = 2[0m
+  [4;36;1mStory Load (0.000186)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 2) [0m
+  [4;35;1mStory Load (0.000208)[0m   [0mSELECT * FROM stories [0m
+  [4;36;1mStory Load (0.000179)[0m   [0;1mSELECT * FROM stories WHERE (stories."link" = 'http://www.testthis.com') LIMIT 1[0m
+  [4;35;1mStory Load (0.000175)[0m   [0mSELECT * FROM stories WHERE (stories."id" = 2) [0m
+  [4;36;1mStory Destroy (0.000366)[0m   [0;1m DELETE FROM stories
+ WHERE "id" = 2
+[0m
+  [4;35;1mStory Load (0.000979)[0m   [0mSELECT * FROM stories [0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-11 09:23:09) [GET]
+  Session ID: 563bb03c46bc4b93b9aab2830050b462
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/articles" with {:method=>:get}):
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1441:in `recognize_path'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1424:in `recognize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-11 09:23:15) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/stories" with {:method=>:get}):
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1441:in `recognize_path'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1424:in `recognize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+  [4;36;1mStory Load (0.000293)[0m   [0;1mSELECT * FROM stories [0m
+  [4;35;1mStory Load (0.000168)[0m   [0mSELECT * FROM stories [0m
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-11 09:51:28) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+Rendering stories/index
+Completed in 0.00149 (669 reqs/sec) | Rendering: 0.00071 (47%) | DB: 0.00000 (0%) | 200 OK [http://localhost/stories]
