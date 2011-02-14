@@ -719,3 +719,620 @@ Processing StoriesController#new (for 127.0.0.1 at 2011-02-11 16:52:06) [GET]
   Parameters: {"action"=>"new", "controller"=>"stories"}
 Rendering stories/new
 Completed in 0.00390 (256 reqs/sec) | Rendering: 0.00136 (34%) | DB: 0.00000 (0%) | 200 OK [http://localhost/stories/new]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-14 08:00:36) [GET]
+  Session ID: cfcfbb0ef0ec2ae9bce2f5cf2042c3d3
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000351)[0m   [0;1mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering stories/index
+Completed in 0.02357 (42 reqs/sec) | Rendering: 0.02045 (86%) | DB: 0.00035 (1%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#new (for 127.0.0.1 at 2011-02-14 08:00:46) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"new", "controller"=>"stories"}
+Rendering stories/new
+Completed in 0.01010 (98 reqs/sec) | Rendering: 0.00752 (74%) | DB: 0.00000 (0%) | 200 OK [http://localhost/stories/new]
+
+
+Processing StoriesController#new (for 127.0.0.1 at 2011-02-14 08:43:18) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGRhNGM3YTQ1NDM0YWRiZGEzMDU3NjFhOTM4MTNh%0AMTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--eacc3a15f36ab1dee307d86279391c72b68742e0
+  Parameters: {"action"=>"new", "controller"=>"stories"}
+Rendering template within layouts/application
+Rendering stories/new
+Completed in 0.03326 (30 reqs/sec) | Rendering: 0.00211 (6%) | DB: 0.00000 (0%) | 200 OK [http://localhost/stories/new]
+
+
+Processing StoriesController#new (for 127.0.0.1 at 2011-02-14 08:56:08) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGRhNGM3YTQ1NDM0YWRiZGEzMDU3NjFhOTM4MTNh%0AMTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--eacc3a15f36ab1dee307d86279391c72b68742e0
+  Parameters: {"action"=>"new", "controller"=>"stories"}
+Rendering template within layouts/application
+Rendering stories/new
+Completed in 0.00509 (196 reqs/sec) | Rendering: 0.00242 (47%) | DB: 0.00000 (0%) | 200 OK [http://localhost/stories/new]
+
+
+Processing StoriesController#new (for 127.0.0.1 at 2011-02-14 08:56:09) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGRhNGM3YTQ1NDM0YWRiZGEzMDU3NjFhOTM4MTNh%0AMTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--eacc3a15f36ab1dee307d86279391c72b68742e0
+  Parameters: {"action"=>"new", "controller"=>"stories"}
+Rendering template within layouts/application
+Rendering stories/new
+Completed in 0.00409 (244 reqs/sec) | Rendering: 0.00156 (38%) | DB: 0.00000 (0%) | 200 OK [http://localhost/stories/new]
+
+
+Processing StoriesController#create (for 127.0.0.1 at 2011-02-14 08:56:26) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGRhNGM3YTQ1NDM0YWRiZGEzMDU3NjFhOTM4MTNh%0AMTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--eacc3a15f36ab1dee307d86279391c72b68742e0
+  Parameters: {"commit"=>"Save changes", "story"=>{"name"=>"ESPN", "link"=>"http://www.espn.com"}, "authenticity_token"=>"df2ea790f679aaab1781ce59d8e48f3cf9862ba5", "action"=>"create", "controller"=>"stories"}
+  [4;35;1mStory Create (0.000198)[0m   [0mINSERT INTO stories ("name", "created_at", "updated_at", "link") VALUES('ESPN', '2011-02-14 08:56:26', '2011-02-14 08:56:26', 'http://www.espn.com')[0m
+Redirected to http://localhost:3000/stories
+Completed in 0.00532 (187 reqs/sec) | DB: 0.00020 (3%) | 302 Found [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-14 08:56:26) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGRhNGM3YTQ1NDM0YWRiZGEzMDU3NjFhOTM4MTNh%0AMTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIh9TdG9yeSBzdWJtaXNzaW9uIHN1Y2NlZWRlZAY6CkB1%0Ac2VkewY7B1Q%3D--215969ab1f47ceac1c4f79dae232bfc3a359744f
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000264)[0m   [0;1mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 0.00399 (250 reqs/sec) | Rendering: 0.00127 (31%) | DB: 0.00026 (6%) | 200 OK [http://localhost/stories]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-14 09:13:54) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGRhNGM3YTQ1NDM0YWRiZGEzMDU3NjFhOTM4MTNh%0AMTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--eacc3a15f36ab1dee307d86279391c72b68742e0
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+
+
+SyntaxError (/Users/bulldoguser/rails_projects/shovell/app/controllers/stories_controller.rb:18: syntax error, unexpected $end, expecting kEND):
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:202:in `load_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:248:in `load_missing_constant'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:453:in `const_missing'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:465:in `const_missing'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/inflector.rb:257:in `constantize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/inflections.rb:148:in `constantize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1426:in `recognize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-14 09:14:29) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGRhNGM3YTQ1NDM0YWRiZGEzMDU3NjFhOTM4MTNh%0AMTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--eacc3a15f36ab1dee307d86279391c72b68742e0
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+
+
+SyntaxError (/Users/bulldoguser/rails_projects/shovell/app/controllers/stories_controller.rb:18: syntax error, unexpected $end, expecting kEND):
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:202:in `load_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:248:in `load_missing_constant'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:453:in `const_missing'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:465:in `const_missing'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/inflector.rb:257:in `constantize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/inflections.rb:148:in `constantize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1426:in `recognize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-14 09:14:29) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGRhNGM3YTQ1NDM0YWRiZGEzMDU3NjFhOTM4MTNh%0AMTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--eacc3a15f36ab1dee307d86279391c72b68742e0
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+
+
+SyntaxError (/Users/bulldoguser/rails_projects/shovell/app/controllers/stories_controller.rb:18: syntax error, unexpected $end, expecting kEND):
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:202:in `load_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:248:in `load_missing_constant'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:453:in `const_missing'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:465:in `const_missing'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/inflector.rb:257:in `constantize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/inflections.rb:148:in `constantize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1426:in `recognize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-14 09:14:30) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGRhNGM3YTQ1NDM0YWRiZGEzMDU3NjFhOTM4MTNh%0AMTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--eacc3a15f36ab1dee307d86279391c72b68742e0
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+
+
+SyntaxError (/Users/bulldoguser/rails_projects/shovell/app/controllers/stories_controller.rb:18: syntax error, unexpected $end, expecting kEND):
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:202:in `load_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:248:in `load_missing_constant'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:453:in `const_missing'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:465:in `const_missing'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/inflector.rb:257:in `constantize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/inflections.rb:148:in `constantize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1426:in `recognize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-14 09:15:31) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGRhNGM3YTQ1NDM0YWRiZGEzMDU3NjFhOTM4MTNh%0AMTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--eacc3a15f36ab1dee307d86279391c72b68742e0
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+
+
+SyntaxError (/Users/bulldoguser/rails_projects/shovell/app/controllers/stories_controller.rb:18: syntax error, unexpected $end, expecting kEND):
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:202:in `load_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:248:in `load_missing_constant'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:453:in `const_missing'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:465:in `const_missing'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/inflector.rb:257:in `constantize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/inflections.rb:148:in `constantize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1426:in `recognize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-14 09:15:32) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGRhNGM3YTQ1NDM0YWRiZGEzMDU3NjFhOTM4MTNh%0AMTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--eacc3a15f36ab1dee307d86279391c72b68742e0
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+
+
+SyntaxError (/Users/bulldoguser/rails_projects/shovell/app/controllers/stories_controller.rb:18: syntax error, unexpected $end, expecting kEND):
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:202:in `load_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:248:in `load_missing_constant'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:453:in `const_missing'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:465:in `const_missing'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/inflector.rb:257:in `constantize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/inflections.rb:148:in `constantize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1426:in `recognize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-14 09:15:32) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGRhNGM3YTQ1NDM0YWRiZGEzMDU3NjFhOTM4MTNh%0AMTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--eacc3a15f36ab1dee307d86279391c72b68742e0
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+
+
+SyntaxError (/Users/bulldoguser/rails_projects/shovell/app/controllers/stories_controller.rb:18: syntax error, unexpected $end, expecting kEND):
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:202:in `load_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:248:in `load_missing_constant'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:453:in `const_missing'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:465:in `const_missing'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/inflector.rb:257:in `constantize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/inflections.rb:148:in `constantize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1426:in `recognize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-14 09:15:45) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGRhNGM3YTQ1NDM0YWRiZGEzMDU3NjFhOTM4MTNh%0AMTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--eacc3a15f36ab1dee307d86279391c72b68742e0
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+
+
+SyntaxError (/Users/bulldoguser/rails_projects/shovell/app/controllers/stories_controller.rb:18: syntax error, unexpected $end, expecting kEND):
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:202:in `load_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:248:in `load_missing_constant'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:453:in `const_missing'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:465:in `const_missing'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/inflector.rb:257:in `constantize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/inflections.rb:148:in `constantize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1426:in `recognize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-14 09:15:45) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGRhNGM3YTQ1NDM0YWRiZGEzMDU3NjFhOTM4MTNh%0AMTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--eacc3a15f36ab1dee307d86279391c72b68742e0
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+
+
+SyntaxError (/Users/bulldoguser/rails_projects/shovell/app/controllers/stories_controller.rb:18: syntax error, unexpected $end, expecting kEND):
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:202:in `load_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:248:in `load_missing_constant'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:453:in `const_missing'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:465:in `const_missing'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/inflector.rb:257:in `constantize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/inflections.rb:148:in `constantize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1426:in `recognize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-14 09:17:52) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGRhNGM3YTQ1NDM0YWRiZGEzMDU3NjFhOTM4MTNh%0AMTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--eacc3a15f36ab1dee307d86279391c72b68742e0
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+
+
+SyntaxError (/Users/bulldoguser/rails_projects/shovell/app/controllers/stories_controller.rb:18: syntax error, unexpected $end, expecting kEND):
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:203:in `load_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:202:in `load_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:94:in `require_or_load'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:248:in `load_missing_constant'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:453:in `const_missing'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:465:in `const_missing'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/inflector.rb:257:in `constantize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/inflections.rb:148:in `constantize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1426:in `recognize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-14 09:19:01) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGRhNGM3YTQ1NDM0YWRiZGEzMDU3NjFhOTM4MTNh%0AMTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--eacc3a15f36ab1dee307d86279391c72b68742e0
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000271)[0m   [0mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 0.00415 (240 reqs/sec) | Rendering: 0.00133 (32%) | DB: 0.00027 (6%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-14 09:19:15) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGRhNGM3YTQ1NDM0YWRiZGEzMDU3NjFhOTM4MTNh%0AMTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--eacc3a15f36ab1dee307d86279391c72b68742e0
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000255)[0m   [0;1mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 0.00400 (250 reqs/sec) | Rendering: 0.00132 (32%) | DB: 0.00026 (6%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#new (for 127.0.0.1 at 2011-02-14 09:19:19) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGRhNGM3YTQ1NDM0YWRiZGEzMDU3NjFhOTM4MTNh%0AMTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--eacc3a15f36ab1dee307d86279391c72b68742e0
+  Parameters: {"action"=>"new", "controller"=>"stories"}
+Rendering template within layouts/application
+Rendering stories/new
+Completed in 0.00447 (223 reqs/sec) | Rendering: 0.00190 (42%) | DB: 0.00000 (0%) | 200 OK [http://localhost/stories/new]
+
+
+Processing StoriesController#create (for 127.0.0.1 at 2011-02-14 09:19:54) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGRhNGM3YTQ1NDM0YWRiZGEzMDU3NjFhOTM4MTNh%0AMTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--eacc3a15f36ab1dee307d86279391c72b68742e0
+  Parameters: {"commit"=>"Save changes", "story"=>{"name"=>"", "link"=>"dfsdfdf"}, "authenticity_token"=>"df2ea790f679aaab1781ce59d8e48f3cf9862ba5", "action"=>"create", "controller"=>"stories"}
+Rendering template within layouts/application
+Rendering stories/new
+Completed in 0.00457 (218 reqs/sec) | Rendering: 0.00126 (27%) | DB: 0.00000 (0%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#create (for 127.0.0.1 at 2011-02-14 09:20:07) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGRhNGM3YTQ1NDM0YWRiZGEzMDU3NjFhOTM4MTNh%0AMTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--eacc3a15f36ab1dee307d86279391c72b68742e0
+  Parameters: {"commit"=>"Save changes", "story"=>{"name"=>"", "link"=>"dfsdfdf"}, "authenticity_token"=>"df2ea790f679aaab1781ce59d8e48f3cf9862ba5", "action"=>"create", "controller"=>"stories"}
+Rendering template within layouts/application
+Rendering stories/new
+Completed in 0.00477 (209 reqs/sec) | Rendering: 0.00137 (28%) | DB: 0.00000 (0%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-14 09:20:10) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGRhNGM3YTQ1NDM0YWRiZGEzMDU3NjFhOTM4MTNh%0AMTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--eacc3a15f36ab1dee307d86279391c72b68742e0
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000250)[0m   [0mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 0.00382 (261 reqs/sec) | Rendering: 0.00125 (32%) | DB: 0.00025 (6%) | 200 OK [http://localhost/stories]
+  [4;36;1mSQL (0.000111)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000084)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000069)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000328)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000026)[0m   [0mPRAGMA index_list(stories)[0m
+  [4;36;1mSQL (0.000046)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: no such table: stories: DROP TABLE stories[0m
+  [4;36;1mSQL (0.001765)[0m   [0;1mCREATE TABLE stories ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) DEFAULT NULL, "link" varchar(255) DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;35;1mSQL (0.001649)[0m   [0mCREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.001601)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000845)[0m   [0mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000111)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000082)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000069)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000339)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000026)[0m   [0mPRAGMA index_list(stories)[0m
+  [4;36;1mSQL (0.000046)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: no such table: stories: DROP TABLE stories[0m
+  [4;36;1mSQL (0.001632)[0m   [0;1mCREATE TABLE stories ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) DEFAULT NULL, "link" varchar(255) DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;35;1mSQL (0.001376)[0m   [0mCREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.001198)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001082)[0m   [0mUPDATE schema_info SET version = 1[0m

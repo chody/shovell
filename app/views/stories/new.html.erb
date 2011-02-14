@@ -1,5 +1,6 @@
 <% form_for @story do |f|%>
 	<p>
+		<%= error_messages_for 'story' %>
 		name: <br />
 		<%= f.text_field :name %>
 		</p>
