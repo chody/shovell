@@ -16,4 +16,7 @@ class StoriesController < ApplicationController
       render :action => 'new'
     end
   end
+  def show
+    @story = Story.find(params[:id])
+  end
 end
