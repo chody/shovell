@@ -1,50 +1,59 @@
 body {
-	background-color: #00008B;
-	margin: 15px 25px;
-	font-family: Helvetica, Arial, sans-serif;
+  background-color: #00008B;
+  margin: 15px 25px;
+  font-family: Helvetica, Arial, sans-serif;
 }
+
 #content {
-	background-color: #fff;
-	border: 10px, solid #ccc;
-	padding: 10px, 10px, 20px, 10px;
-	overflow: hidden;
+  background-color: #fff;
+  border: 10px solid #ccc;
+  padding: 10px 10px 20px 10px;
+  overflow: hidden;
 }
+
 * html #content {
-	height: 1%;
+  height: 1%;
 }
-#vote_history {
-	padding: 5px;
-	margin: 0;
-	list-style: none;
-	border: 3px solid #ccc;
-	background-color: #eee;
-	float: right;
-	color: #999;
-	font-size: smaller;
-}
+
 #notification {
-	border: 5px, solid #9c9;
-	background-color: #cfc;
-	padding: 5px;
-	margin: 10px 0;
+  border: 5px solid #9c9;
+  background-color: #cfc;
+  padding: 5px;
+  margin: 10px 0;
 }
+
 .fieldWithErrors {
-	border: 5px solid #f66;
+  border: 5px solid #f66;
 }
+
 #vote_score {
-		float: right;
-		color: #FF0000;
+  float: right;
+  color: #00008B;
 }
+
 #vote_form {
-	margin: 10px 0;
+  margin: 10px 0;
 }
+
 #vote_form input {
-	padding: 3px 5px;
-	border: 3px solid;
-	background-color: #cfc;
-	text-decoration: none;
-	color: #393;
+  padding: 3px 5px;
+  border: 3px solid #483D8B;
+  background-color: #A9A9A9;
+  text-decoration: none;
+  color: #00008B;
 }
+
 #vote_form input:hover {
-	background-color: #aea;
+  background-color: #FF0000;
+}
+
+#vote_history {
+  padding: 5px;
+  margin: 0;
+  list-style: none;
+  border: 3px solid #ccc;
+  background-color: #eee;
+  float: right;
+  color: #999;
+  font-size: smaller;
 }

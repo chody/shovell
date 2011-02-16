@@ -9,7 +9,7 @@
 	<em>No shoves yet!</em>
 	<% else %>
 	<%= render :partial => 'votes/vote', 
-			   :collection => @story.votes %>
+			   :collection => @story.votes.latest %>
 	<% end %>
 </ul>
 <p>

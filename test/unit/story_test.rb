@@ -15,4 +15,16 @@ class StoryTest < ActiveSupport::TestCase
     :name => 'My test submission'
     :link => 'http://www.testsubmission.com/'
     asserts.valid?)
+    def test_should_have_a_votes_association
+      assert_equal [ votes(:one), votes(:two) ],
+        stories(:one).votes
+    end
+    def test_should_return_highest_vote_id_first
+      assert_equal votes(:two), stories(:one).votes.lates.first
+    end
+    def test_should_return_3_latest_votes
+      10.time { stories(:one).votes.create}
+      assert_equal votes(:two), stories(:one).votes.latest.size
+    end
 end
+

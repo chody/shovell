@@ -7068,3 +7068,1681 @@ Rendered votes/_vote (0.00012)
 Rendered votes/_vote (0.00012)
 Rendered votes/_vote (0.00012)
 Completed in 0.00958 (104 reqs/sec) | Rendering: 0.00598 (62%) | DB: 0.00040 (4%) | 200 OK [http://localhost/stories/5]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-16 08:12:21) [GET]
+  Session ID: e3637a0ea837ac5f6488c3e4a9382a52
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000353)[0m   [0;1mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 0.01440 (69 reqs/sec) | Rendering: 0.01130 (78%) | DB: 0.00035 (2%) | 200 OK [http://localhost/stories]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2011-02-16 08:12:23) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--bc498f699f5dd308518e1f2f4c0d6e4de130cb04
+  Parameters: {"action"=>"show", "id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000122)[0m   [0mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/show
+  [4;36;1mSQL (0.000103)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;36;1mVote Load (0.000166)[0m   [0;1mSELECT * FROM votes WHERE (votes.story_id = 1) [0m
+Rendered votes/_vote (0.01252)
+Rendered votes/_vote (0.00013)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00013)
+Rendered votes/_vote (0.00012)
+Completed in 0.02174 (46 reqs/sec) | Rendering: 0.01819 (83%) | DB: 0.00039 (1%) | 200 OK [http://localhost/stories/1-a-weblog-about-ruby-on-rails]
+
+
+Processing VotesController#create (for 127.0.0.1 at 2011-02-16 08:12:25) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"commit"=>"shove it", "authenticity_token"=>"5324d2e57ba4af924349bca14ff13296943703d9", "action"=>"create", "story_id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"votes"}
+  [4;35;1mStory Load (0.000106)[0m   [0mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+  [4;36;1mVote Create (0.000189)[0m   [0;1mINSERT INTO votes ("created_at", "updated_at", "story_id") VALUES('2011-02-16 08:12:25', '2011-02-16 08:12:25', 1)[0m
+Rendering votes/create
+  [4;35;1mSQL (0.000135)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+
+
+ActionView::TemplateError (undefined method `[]' for #<Enumerable::Enumerator:0x10212d948>) on line #2 of votes/create.js.rjs:
+1: page.replace_html 'vote_score', "Score: #{@story.votes.size}"
+2: page[:vote_score].visual_effect :highlight
+3: page[:vote_history].replace_html :partial => 'vote',
+4:                                  :collection => @story.votes
+5: 
+
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/access.rb:43:in `first'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/inflector.rb:151:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/inflections.rb:49:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:1079:in `method_missing'
+    app/views/votes/create.js.rjs:2:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `instance_exec'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `initialize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `new'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `update_page'
+    app/views/votes/create.js.rjs:0:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/votes_controller.rb:7:in `create'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing VotesController#create (for 127.0.0.1 at 2011-02-16 08:12:25) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"commit"=>"shove it", "authenticity_token"=>"5324d2e57ba4af924349bca14ff13296943703d9", "action"=>"create", "story_id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"votes"}
+  [4;36;1mStory Load (0.000102)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+  [4;35;1mVote Create (0.000192)[0m   [0mINSERT INTO votes ("created_at", "updated_at", "story_id") VALUES('2011-02-16 08:12:25', '2011-02-16 08:12:25', 1)[0m
+Rendering votes/create
+  [4;36;1mSQL (0.000100)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+
+
+ActionView::TemplateError (undefined method `[]' for #<Enumerable::Enumerator:0x10213d5a0>) on line #2 of votes/create.js.rjs:
+1: page.replace_html 'vote_score', "Score: #{@story.votes.size}"
+2: page[:vote_score].visual_effect :highlight
+3: page[:vote_history].replace_html :partial => 'vote',
+4:                                  :collection => @story.votes
+5: 
+
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/access.rb:43:in `first'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/inflector.rb:151:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/inflections.rb:49:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:1079:in `method_missing'
+    app/views/votes/create.js.rjs:2:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `instance_exec'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `initialize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `new'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `update_page'
+    app/views/votes/create.js.rjs:0:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/votes_controller.rb:7:in `create'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing VotesController#create (for 127.0.0.1 at 2011-02-16 08:12:26) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"commit"=>"shove it", "authenticity_token"=>"5324d2e57ba4af924349bca14ff13296943703d9", "action"=>"create", "story_id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"votes"}
+  [4;35;1mStory Load (0.000102)[0m   [0mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+  [4;36;1mVote Create (0.000183)[0m   [0;1mINSERT INTO votes ("created_at", "updated_at", "story_id") VALUES('2011-02-16 08:12:26', '2011-02-16 08:12:26', 1)[0m
+Rendering votes/create
+  [4;35;1mSQL (0.000100)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+
+
+ActionView::TemplateError (undefined method `[]' for #<Enumerable::Enumerator:0x102278c08>) on line #2 of votes/create.js.rjs:
+1: page.replace_html 'vote_score', "Score: #{@story.votes.size}"
+2: page[:vote_score].visual_effect :highlight
+3: page[:vote_history].replace_html :partial => 'vote',
+4:                                  :collection => @story.votes
+5: 
+
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/access.rb:43:in `first'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/inflector.rb:151:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/inflections.rb:49:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:1079:in `method_missing'
+    app/views/votes/create.js.rjs:2:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `instance_exec'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `initialize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `new'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `update_page'
+    app/views/votes/create.js.rjs:0:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/votes_controller.rb:7:in `create'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing VotesController#create (for 127.0.0.1 at 2011-02-16 08:12:27) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"commit"=>"shove it", "authenticity_token"=>"5324d2e57ba4af924349bca14ff13296943703d9", "action"=>"create", "story_id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"votes"}
+  [4;36;1mStory Load (0.000100)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+  [4;35;1mVote Create (0.000194)[0m   [0mINSERT INTO votes ("created_at", "updated_at", "story_id") VALUES('2011-02-16 08:12:27', '2011-02-16 08:12:27', 1)[0m
+Rendering votes/create
+  [4;36;1mSQL (0.000115)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+
+
+ActionView::TemplateError (undefined method `[]' for #<Enumerable::Enumerator:0x1022f7b70>) on line #2 of votes/create.js.rjs:
+1: page.replace_html 'vote_score', "Score: #{@story.votes.size}"
+2: page[:vote_score].visual_effect :highlight
+3: page[:vote_history].replace_html :partial => 'vote',
+4:                                  :collection => @story.votes
+5: 
+
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/access.rb:43:in `first'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/inflector.rb:151:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/inflections.rb:49:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:1079:in `method_missing'
+    app/views/votes/create.js.rjs:2:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `instance_exec'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `initialize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `new'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `update_page'
+    app/views/votes/create.js.rjs:0:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/votes_controller.rb:7:in `create'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing VotesController#create (for 127.0.0.1 at 2011-02-16 08:12:28) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"commit"=>"shove it", "authenticity_token"=>"5324d2e57ba4af924349bca14ff13296943703d9", "action"=>"create", "story_id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"votes"}
+  [4;35;1mStory Load (0.000101)[0m   [0mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+  [4;36;1mVote Create (0.000186)[0m   [0;1mINSERT INTO votes ("created_at", "updated_at", "story_id") VALUES('2011-02-16 08:12:28', '2011-02-16 08:12:28', 1)[0m
+Rendering votes/create
+  [4;35;1mSQL (0.000106)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+
+
+ActionView::TemplateError (undefined method `[]' for #<Enumerable::Enumerator:0x10238b078>) on line #2 of votes/create.js.rjs:
+1: page.replace_html 'vote_score', "Score: #{@story.votes.size}"
+2: page[:vote_score].visual_effect :highlight
+3: page[:vote_history].replace_html :partial => 'vote',
+4:                                  :collection => @story.votes
+5: 
+
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/access.rb:43:in `first'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/inflector.rb:151:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/inflections.rb:49:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:1079:in `method_missing'
+    app/views/votes/create.js.rjs:2:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `instance_exec'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `initialize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `new'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `update_page'
+    app/views/votes/create.js.rjs:0:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/votes_controller.rb:7:in `create'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2011-02-16 08:12:29) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"action"=>"show", "id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000105)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/show
+  [4;35;1mSQL (0.000109)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;35;1mVote Load (0.000235)[0m   [0mSELECT * FROM votes WHERE (votes.story_id = 1) [0m
+Rendered votes/_vote (0.00044)
+Rendered votes/_vote (0.00013)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Completed in 0.00988 (101 reqs/sec) | Rendering: 0.00648 (65%) | DB: 0.00045 (4%) | 200 OK [http://localhost/stories/1-a-weblog-about-ruby-on-rails]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2011-02-16 08:14:33) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"action"=>"show", "id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000098)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/show
+  [4;35;1mSQL (0.000108)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;35;1mVote Load (0.000228)[0m   [0mSELECT * FROM votes WHERE (votes.story_id = 1) [0m
+Rendered votes/_vote (0.00067)
+Rendered votes/_vote (0.00013)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Completed in 0.01227 (81 reqs/sec) | Rendering: 0.00859 (69%) | DB: 0.00043 (3%) | 200 OK [http://localhost/stories/1-a-weblog-about-ruby-on-rails]
+
+
+Processing VotesController#create (for 127.0.0.1 at 2011-02-16 08:14:34) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"commit"=>"shove it", "authenticity_token"=>"5324d2e57ba4af924349bca14ff13296943703d9", "action"=>"create", "story_id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"votes"}
+  [4;36;1mStory Load (0.000100)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+  [4;35;1mVote Create (0.000229)[0m   [0mINSERT INTO votes ("created_at", "updated_at", "story_id") VALUES('2011-02-16 08:14:34', '2011-02-16 08:14:34', 1)[0m
+Rendering votes/create
+  [4;36;1mSQL (0.000121)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+
+
+ActionView::TemplateError (undefined method `[]' for #<Enumerable::Enumerator:0x102340bb8>) on line #2 of votes/create.js.rjs:
+1: page.replace_html 'vote_score', "Score: #{@story.votes.size}"
+2: page[:vote_score].visual_effect :highlight
+3: page[:vote_history].replace_html :partial => 'vote',
+4:                                  :collection => @story.votes
+5: 
+
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/access.rb:43:in `first'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/inflector.rb:151:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/inflections.rb:49:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:1079:in `method_missing'
+    app/views/votes/create.js.rjs:2:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `instance_exec'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `initialize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `new'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `update_page'
+    app/views/votes/create.js.rjs:0:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/votes_controller.rb:7:in `create'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2011-02-16 08:14:37) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"action"=>"show", "id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000100)[0m   [0mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/show
+  [4;36;1mSQL (0.000096)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;36;1mVote Load (0.000230)[0m   [0;1mSELECT * FROM votes WHERE (votes.story_id = 1) [0m
+Rendered votes/_vote (0.00045)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00011)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00043)
+Rendered votes/_vote (0.00011)
+Rendered votes/_vote (0.00012)
+Completed in 0.01040 (96 reqs/sec) | Rendering: 0.00703 (67%) | DB: 0.00043 (4%) | 200 OK [http://localhost/stories/1-a-weblog-about-ruby-on-rails]
+
+
+Processing VotesController#create (for 127.0.0.1 at 2011-02-16 08:34:44) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"commit"=>"shove it", "authenticity_token"=>"5324d2e57ba4af924349bca14ff13296943703d9", "action"=>"create", "story_id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"votes"}
+  [4;36;1mStory Load (0.000104)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+  [4;35;1mVote Create (0.000248)[0m   [0mINSERT INTO votes ("created_at", "updated_at", "story_id") VALUES('2011-02-16 08:34:44', '2011-02-16 08:34:44', 1)[0m
+Rendering votes/create
+  [4;36;1mSQL (0.000129)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+
+
+ActionView::TemplateError (undefined method `[]' for #<Enumerable::Enumerator:0x1016c6c48>) on line #2 of votes/create.js.rjs:
+1: page.replace_html 'vote_score', "Score: #{@story.votes.size}"
+2: page[:vote_score].visual_effect :highlight
+3: page[:vote_history].replace_html :partial => 'vote',
+4:                                  :collection => @story.votes
+5: 
+
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/access.rb:43:in `first'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/inflector.rb:151:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/inflections.rb:49:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:1079:in `method_missing'
+    app/views/votes/create.js.rjs:2:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `instance_exec'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `initialize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `new'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `update_page'
+    app/views/votes/create.js.rjs:0:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/votes_controller.rb:7:in `create'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2011-02-16 08:34:47) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"action"=>"show", "id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000109)[0m   [0mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/show
+  [4;36;1mSQL (0.000096)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;36;1mVote Load (0.000256)[0m   [0;1mSELECT * FROM votes WHERE (votes.story_id = 1) [0m
+Rendered votes/_vote (0.00068)
+Rendered votes/_vote (0.00013)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00013)
+Rendered votes/_vote (0.00013)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00011)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00013)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00011)
+Completed in 0.01229 (81 reqs/sec) | Rendering: 0.00874 (71%) | DB: 0.00046 (3%) | 200 OK [http://localhost/stories/1-a-weblog-about-ruby-on-rails]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2011-02-16 08:50:55) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"action"=>"show", "id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000105)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/show
+  [4;35;1mSQL (0.000109)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;35;1mVote Load (0.000249)[0m   [0mSELECT * FROM votes WHERE (votes.story_id = 1) [0m
+Rendered votes/_vote (0.00068)
+Rendered votes/_vote (0.00013)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00013)
+Rendered votes/_vote (0.00013)
+Rendered votes/_vote (0.00014)
+Rendered votes/_vote (0.00014)
+Rendered votes/_vote (0.00013)
+Rendered votes/_vote (0.00014)
+Rendered votes/_vote (0.00014)
+Completed in 0.01319 (75 reqs/sec) | Rendering: 0.00948 (71%) | DB: 0.00046 (3%) | 200 OK [http://localhost/stories/1-a-weblog-about-ruby-on-rails]
+
+
+Processing VotesController#create (for 127.0.0.1 at 2011-02-16 08:50:58) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"commit"=>"shove it", "authenticity_token"=>"5324d2e57ba4af924349bca14ff13296943703d9", "action"=>"create", "story_id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"votes"}
+  [4;36;1mStory Load (0.000100)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+  [4;35;1mVote Create (0.000226)[0m   [0mINSERT INTO votes ("created_at", "updated_at", "story_id") VALUES('2011-02-16 08:50:58', '2011-02-16 08:50:58', 1)[0m
+Rendering votes/create
+  [4;36;1mSQL (0.000139)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+
+
+ActionView::TemplateError (undefined method `[]' for #<Enumerable::Enumerator:0x10230f6f8>) on line #2 of votes/create.js.rjs:
+1: page.replace_html 'vote_score', "Score: #{@story.votes.size}"
+2: page[:vote_score].visual_effect :highlight
+3: page[:vote_history].replace_html :partial => 'vote',
+4:                                  :collection => @story.votes
+5: 
+
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/access.rb:43:in `first'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/inflector.rb:151:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/inflections.rb:49:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:1079:in `method_missing'
+    app/views/votes/create.js.rjs:2:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `instance_exec'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `initialize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `new'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `update_page'
+    app/views/votes/create.js.rjs:0:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/votes_controller.rb:7:in `create'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing VotesController#create (for 127.0.0.1 at 2011-02-16 08:51:01) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"commit"=>"shove it", "authenticity_token"=>"5324d2e57ba4af924349bca14ff13296943703d9", "action"=>"create", "story_id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"votes"}
+  [4;35;1mStory Load (0.000103)[0m   [0mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+  [4;36;1mVote Create (0.000212)[0m   [0;1mINSERT INTO votes ("created_at", "updated_at", "story_id") VALUES('2011-02-16 08:51:01', '2011-02-16 08:51:01', 1)[0m
+Rendering votes/create
+  [4;35;1mSQL (0.000112)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+
+
+ActionView::TemplateError (undefined method `[]' for #<Enumerable::Enumerator:0x102342b20>) on line #2 of votes/create.js.rjs:
+1: page.replace_html 'vote_score', "Score: #{@story.votes.size}"
+2: page[:vote_score].visual_effect :highlight
+3: page[:vote_history].replace_html :partial => 'vote',
+4:                                  :collection => @story.votes
+5: 
+
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/access.rb:43:in `first'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/inflector.rb:151:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/inflections.rb:49:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:1079:in `method_missing'
+    app/views/votes/create.js.rjs:2:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `instance_exec'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `initialize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `new'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `update_page'
+    app/views/votes/create.js.rjs:0:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/votes_controller.rb:7:in `create'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2011-02-16 08:51:03) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"action"=>"show", "id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000104)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/show
+  [4;35;1mSQL (0.000095)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;35;1mVote Load (0.000262)[0m   [0mSELECT * FROM votes WHERE (votes.story_id = 1) [0m
+Rendered votes/_vote (0.00045)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Completed in 0.01094 (91 reqs/sec) | Rendering: 0.00746 (68%) | DB: 0.00046 (4%) | 200 OK [http://localhost/stories/1-a-weblog-about-ruby-on-rails]
+
+
+Processing VotesController#create (for 127.0.0.1 at 2011-02-16 08:56:24) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"commit"=>"shove it", "authenticity_token"=>"5324d2e57ba4af924349bca14ff13296943703d9", "action"=>"create", "story_id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"votes"}
+  [4;36;1mStory Load (0.000101)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+  [4;35;1mVote Create (0.000197)[0m   [0mINSERT INTO votes ("created_at", "updated_at", "story_id") VALUES('2011-02-16 08:56:24', '2011-02-16 08:56:24', 1)[0m
+Rendering votes/create
+  [4;36;1mSQL (0.000103)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+
+
+ActionView::TemplateError (undefined method `[]' for #<Enumerable::Enumerator:0x101fffb98>) on line #2 of votes/create.js.rjs:
+1: page.replace_html 'vote_score', "Score: #{@story.votes.size}"
+2: page[:vote_score].visual_effect :highlight
+3: page[:vote_history].replace_html :partial => 'vote',
+4:     :collection => @story.votes
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/access.rb:43:in `first'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/inflector.rb:151:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/inflections.rb:49:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:1079:in `method_missing'
+    app/views/votes/create.js.rjs:2:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `instance_exec'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `initialize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `new'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `update_page'
+    app/views/votes/create.js.rjs:0:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/votes_controller.rb:7:in `create'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2011-02-16 08:56:27) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"action"=>"show", "id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000105)[0m   [0mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/show
+  [4;36;1mSQL (0.000095)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;36;1mVote Load (0.000281)[0m   [0;1mSELECT * FROM votes WHERE (votes.story_id = 1) [0m
+Rendered votes/_vote (0.00046)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Completed in 0.01187 (84 reqs/sec) | Rendering: 0.00794 (66%) | DB: 0.00048 (4%) | 200 OK [http://localhost/stories/1-a-weblog-about-ruby-on-rails]
+
+
+Processing VotesController#create (for 127.0.0.1 at 2011-02-16 09:00:43) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"commit"=>"shove it", "authenticity_token"=>"5324d2e57ba4af924349bca14ff13296943703d9", "action"=>"create", "story_id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"votes"}
+  [4;35;1mStory Load (0.000101)[0m   [0mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+  [4;36;1mVote Create (0.000185)[0m   [0;1mINSERT INTO votes ("created_at", "updated_at", "story_id") VALUES('2011-02-16 09:00:43', '2011-02-16 09:00:43', 1)[0m
+Rendering votes/create
+  [4;35;1mSQL (0.000104)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+
+
+ActionView::TemplateError (undefined method `[]' for #<Enumerable::Enumerator:0x10181a428>) on line #2 of votes/create.js.rjs:
+1: page.replace_html 'vote_score', "Score: #{@story.votes.size}"
+2: page[:vote_score].visual_effect :highlight
+3: page[:vote_history].replace_html :partial => 'vote',
+4:     :collection => @story.votes
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/access.rb:43:in `first'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/inflector.rb:151:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/inflections.rb:49:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:1079:in `method_missing'
+    app/views/votes/create.js.rjs:2:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `instance_exec'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `initialize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `new'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `update_page'
+    app/views/votes/create.js.rjs:0:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/votes_controller.rb:6:in `create'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2011-02-16 09:00:44) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"action"=>"show", "id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000102)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/show
+  [4;35;1mSQL (0.000096)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;35;1mVote Load (0.000298)[0m   [0mSELECT * FROM votes WHERE (votes.story_id = 1) [0m
+Rendered votes/_vote (0.00045)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00013)
+Completed in 0.01147 (87 reqs/sec) | Rendering: 0.00774 (67%) | DB: 0.00050 (4%) | 200 OK [http://localhost/stories/1-a-weblog-about-ruby-on-rails]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2011-02-16 09:02:00) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"action"=>"show", "id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000101)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/show
+  [4;35;1mSQL (0.000097)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;35;1mVote Load (0.000309)[0m   [0mSELECT * FROM votes WHERE (votes.story_id = 1) [0m
+Rendered votes/_vote (0.00045)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00013)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Completed in 0.01141 (87 reqs/sec) | Rendering: 0.00779 (68%) | DB: 0.00051 (4%) | 200 OK [http://localhost/stories/1-a-weblog-about-ruby-on-rails]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2011-02-16 09:02:33) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"action"=>"show", "id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000101)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/show
+  [4;35;1mSQL (0.000100)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;35;1mVote Load (0.000312)[0m   [0mSELECT * FROM votes WHERE (votes.story_id = 1) [0m
+Rendered votes/_vote (0.00046)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00011)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00011)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00013)
+Rendered votes/_vote (0.00011)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00011)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00011)
+Rendered votes/_vote (0.00012)
+Completed in 0.01160 (86 reqs/sec) | Rendering: 0.00810 (69%) | DB: 0.00051 (4%) | 200 OK [http://localhost/stories/1-a-weblog-about-ruby-on-rails]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2011-02-16 09:03:16) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"action"=>"show", "id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000101)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/show
+  [4;35;1mSQL (0.000128)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;35;1mVote Load (0.000330)[0m   [0mSELECT * FROM votes WHERE (votes.story_id = 1) [0m
+Rendered votes/_vote (0.00047)
+Rendered votes/_vote (0.00013)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Completed in 0.04134 (24 reqs/sec) | Rendering: 0.03768 (91%) | DB: 0.00056 (1%) | 200 OK [http://localhost/stories/1-a-weblog-about-ruby-on-rails]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2011-02-16 09:04:37) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"action"=>"show", "id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000099)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/show
+  [4;35;1mSQL (0.000097)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;35;1mVote Load (0.000289)[0m   [0mSELECT * FROM votes WHERE (votes.story_id = 1) [0m
+Rendered votes/_vote (0.00044)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00011)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00011)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00013)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Completed in 0.01182 (84 reqs/sec) | Rendering: 0.00823 (69%) | DB: 0.00048 (4%) | 200 OK [http://localhost/stories/1-a-weblog-about-ruby-on-rails]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2011-02-16 09:05:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"action"=>"show", "id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000099)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/show
+  [4;35;1mSQL (0.000098)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;35;1mVote Load (0.000286)[0m   [0mSELECT * FROM votes WHERE (votes.story_id = 1) [0m
+Rendered votes/_vote (0.00045)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00011)
+Rendered votes/_vote (0.00011)
+Rendered votes/_vote (0.00011)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00011)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00011)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00011)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00011)
+Rendered votes/_vote (0.00011)
+Rendered votes/_vote (0.00012)
+Completed in 0.01165 (85 reqs/sec) | Rendering: 0.00799 (68%) | DB: 0.00048 (4%) | 200 OK [http://localhost/stories/1-a-weblog-about-ruby-on-rails]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2011-02-16 09:05:42) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"action"=>"show", "id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000100)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/show
+  [4;35;1mSQL (0.000096)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;35;1mVote Load (0.000286)[0m   [0mSELECT * FROM votes WHERE (votes.story_id = 1) [0m
+Rendered votes/_vote (0.00045)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00011)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00013)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00011)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Completed in 0.01136 (87 reqs/sec) | Rendering: 0.00765 (67%) | DB: 0.00048 (4%) | 200 OK [http://localhost/stories/1-a-weblog-about-ruby-on-rails]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2011-02-16 09:20:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"action"=>"show", "id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000101)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/show
+  [4;35;1mSQL (0.000095)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;35;1mVote Load (0.000117)[0m   [0mSELECT * FROM votes WHERE (votes.story_id = 1) ORDER BY id DESC LIMIT 3[0m
+Rendered votes/_vote (0.00050)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Completed in 0.00899 (111 reqs/sec) | Rendering: 0.00554 (61%) | DB: 0.00031 (3%) | 200 OK [http://localhost/stories/1-a-weblog-about-ruby-on-rails]
+  [4;36;1mSQL (0.000113)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000085)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000065)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000068)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000091)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000026)[0m   [0;1mPRAGMA index_list(stories)[0m
+  [4;35;1mSQL (0.000024)[0m   [0mPRAGMA index_list(votes)[0m
+  [4;36;1mSQL (0.000046)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: no such table: stories: DROP TABLE stories[0m
+  [4;36;1mSQL (0.001794)[0m   [0;1mCREATE TABLE stories ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) DEFAULT NULL, "link" varchar(255) DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: no such table: votes: DROP TABLE votes[0m
+  [4;36;1mSQL (0.001631)[0m   [0;1mCREATE TABLE votes ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "story_id" integer DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;35;1mSQL (0.001489)[0m   [0mCREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.001381)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.001383)[0m   [0mUPDATE schema_info SET version = 2[0m
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2011-02-16 09:50:08) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"action"=>"show", "id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"stories"}
+  [4;36;1mStory Load (0.000098)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/show
+  [4;35;1mSQL (0.000111)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;35;1mVote Load (0.000123)[0m   [0mSELECT * FROM votes WHERE (votes.story_id = 1) ORDER BY id DESC LIMIT 3[0m
+Rendered votes/_vote (0.00069)
+Rendered votes/_vote (0.00013)
+Rendered votes/_vote (0.00012)
+Completed in 0.01051 (95 reqs/sec) | Rendering: 0.00679 (64%) | DB: 0.00033 (3%) | 200 OK [http://localhost/stories/1-a-weblog-about-ruby-on-rails]
+
+
+Processing VotesController#create (for 127.0.0.1 at 2011-02-16 09:50:10) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"commit"=>"shove it", "authenticity_token"=>"5324d2e57ba4af924349bca14ff13296943703d9", "action"=>"create", "story_id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"votes"}
+  [4;36;1mStory Load (0.000099)[0m   [0;1mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+  [4;35;1mVote Create (0.000231)[0m   [0mINSERT INTO votes ("created_at", "updated_at", "story_id") VALUES('2011-02-16 09:50:10', '2011-02-16 09:50:10', 1)[0m
+Rendering votes/create
+  [4;36;1mSQL (0.000145)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+
+
+ActionView::TemplateError (undefined method `[]' for #<Enumerable::Enumerator:0x10236aa08>) on line #2 of votes/create.js.rjs:
+1: page.replace_html 'vote_score', "Score: #{@story.votes.size}"
+2: page[:vote_score].visual_effect :highlight
+3: page[:vote_history].replace_html :partial => 'vote',
+4:     :collection => @story.votes.latest
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/access.rb:43:in `first'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/inflector.rb:151:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/core_ext/string/inflections.rb:49:in `camelize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:1079:in `method_missing'
+    app/views/votes/create.js.rjs:2:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `instance_exec'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:581:in `initialize'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `new'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/helpers/prototype_helper.rb:992:in `update_page'
+    app/views/votes/create.js.rjs:0:in `_run_rjs_47app47views47votes47create46js46rjs'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:637:in `compile_and_render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1100:in `render_for_file'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:858:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:872:in `render_with_no_layout'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `call'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:156:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `each'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:150:in `respond'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/votes_controller.rb:6:in `create'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:78:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/webrick_server.rb:62:in `dispatch'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/servers/webrick.rb:66
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/rails-2.0.2/lib/commands/server.rb:39
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `gem_original_require'
+    /Users/bulldoguser/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:29:in `require'
+    script/server:3
+
+Rendering /Users/bulldoguser/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2011-02-16 09:50:14) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"action"=>"show", "id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000101)[0m   [0mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/show
+  [4;36;1mSQL (0.000100)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;36;1mVote Load (0.000120)[0m   [0;1mSELECT * FROM votes WHERE (votes.story_id = 1) ORDER BY id DESC LIMIT 3[0m
+Rendered votes/_vote (0.00045)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Completed in 0.00835 (119 reqs/sec) | Rendering: 0.00497 (59%) | DB: 0.00032 (3%) | 200 OK [http://localhost/stories/1-a-weblog-about-ruby-on-rails]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2011-02-16 09:51:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"action"=>"show", "id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000104)[0m   [0mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/show
+  [4;36;1mSQL (0.000097)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;36;1mVote Load (0.000118)[0m   [0;1mSELECT * FROM votes WHERE (votes.story_id = 1) ORDER BY id DESC LIMIT 3[0m
+Rendered votes/_vote (0.00044)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00011)
+Completed in 0.00843 (118 reqs/sec) | Rendering: 0.00470 (55%) | DB: 0.00032 (3%) | 200 OK [http://localhost/stories/1-a-weblog-about-ruby-on-rails]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2011-02-16 09:51:08) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"action"=>"show", "id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000100)[0m   [0mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/show
+  [4;36;1mSQL (0.000097)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;36;1mVote Load (0.000116)[0m   [0;1mSELECT * FROM votes WHERE (votes.story_id = 1) ORDER BY id DESC LIMIT 3[0m
+Rendered votes/_vote (0.00046)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Completed in 0.00914 (109 reqs/sec) | Rendering: 0.00507 (55%) | DB: 0.00031 (3%) | 200 OK [http://localhost/stories/1-a-weblog-about-ruby-on-rails]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2011-02-16 09:51:09) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"action"=>"show", "id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000102)[0m   [0mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/show
+  [4;36;1mSQL (0.000095)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;36;1mVote Load (0.000117)[0m   [0;1mSELECT * FROM votes WHERE (votes.story_id = 1) ORDER BY id DESC LIMIT 3[0m
+Rendered votes/_vote (0.00048)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Completed in 0.00839 (119 reqs/sec) | Rendering: 0.00485 (57%) | DB: 0.00031 (3%) | 200 OK [http://localhost/stories/1-a-weblog-about-ruby-on-rails]
+
+
+Processing StoriesController#show (for 127.0.0.1 at 2011-02-16 09:51:10) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZjM2YzliZWQzN2Q4MmI3NTI0NzEzMDYzMDhiNGE0%0AZWMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--a259ef5e6b96188b4e69535aecb3e094114a7042
+  Parameters: {"action"=>"show", "id"=>"1-a-weblog-about-ruby-on-rails", "controller"=>"stories"}
+  [4;35;1mStory Load (0.000109)[0m   [0mSELECT * FROM stories WHERE (stories."id" = 1) [0m
+Rendering template within layouts/application
+Rendering stories/show
+  [4;36;1mSQL (0.000103)[0m   [0;1mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM votes WHERE (votes.story_id = 1) [0m
+  [4;36;1mVote Load (0.000121)[0m   [0;1mSELECT * FROM votes WHERE (votes.story_id = 1) ORDER BY id DESC LIMIT 3[0m
+Rendered votes/_vote (0.00047)
+Rendered votes/_vote (0.00012)
+Rendered votes/_vote (0.00012)
+Completed in 0.00893 (111 reqs/sec) | Rendering: 0.00505 (56%) | DB: 0.00033 (3%) | 200 OK [http://localhost/stories/1-a-weblog-about-ruby-on-rails]
+  [4;36;1mSQL (0.000112)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.001810)[0m   [0mALTER TABLE stories ADD "user_id" integer[0m
+  [4;36;1mSQL (0.002602)[0m   [0;1mVACUUM[0m
+  [4;35;1mSQL (0.001120)[0m   [0mALTER TABLE votes ADD "user_id" integer[0m
+  [4;36;1mSQL (0.002373)[0m   [0;1mVACUUM[0m
+  [4;35;1mSQL (0.000190)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000072)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000063)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateUsers (3)
+  [4;36;1mSQL (0.001691)[0m   [0;1mCREATE TABLE users ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) DEFAULT NULL, "password" varchar(255) DEFAULT NULL, "name" varchar(255) DEFAULT NULL, "email" varchar(255) DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;35;1mSQL (0.001296)[0m   [0mUPDATE schema_info SET version = 3[0m
+  [4;36;1mSQL (0.000075)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000095)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000025)[0m   [0;1mPRAGMA index_list(stories)[0m
+  [4;35;1mSQL (0.000024)[0m   [0mPRAGMA index_list(users)[0m
+  [4;36;1mSQL (0.000024)[0m   [0;1mPRAGMA index_list(votes)[0m
+  [4;36;1mUser Load (0.000268)[0m   [0;1mSELECT * FROM users [0m
+  [4;35;1mUser Create (0.000481)[0m   [0mINSERT INTO users ("name", "created_at", "updated_at", "login", "password", "email") VALUES('Cody Hill', '2011-02-16 10:19:23', '2011-02-16 10:19:23', 'cody', 'password', 'codyhill@bdogm.com')[0m
+  [4;36;1mUser Load (0.000178)[0m   [0;1mSELECT * FROM users [0m
