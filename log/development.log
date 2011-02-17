@@ -9326,3 +9326,66 @@ Processing SessionsController#create (for 127.0.0.1 at 2011-02-16 17:00:50) [POS
 Rendering template within layouts/application
 Rendering sessions/new
 Completed in 0.00647 (154 reqs/sec) | Rendering: 0.00232 (35%) | DB: 0.00009 (1%) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-02-16 17:36:00) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNzM5OWU5MDg3ZjZmZjIyYTUyMzU5YjNlOTdjM2Ux%0AYmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72e13ad920f9082afb6c78d0b5d6d4f8bd12e466
+  Parameters: {"commit"=>"Login", "login "=>"cody ", "authenticity_token"=>"7d1ea2a97a7e23af76cc091fec09ca650dcd90f2", "action"=>"create", "controller"=>"sessions", "password"=>"password"}
+  [4;36;1mUser Load (0.000088)[0m   [0;1mSELECT * FROM users WHERE (users."password" = 'password' AND users."login" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.00650 (153 reqs/sec) | Rendering: 0.00230 (35%) | DB: 0.00009 (1%) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-02-16 17:37:47) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNzM5OWU5MDg3ZjZmZjIyYTUyMzU5YjNlOTdjM2Ux%0AYmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72e13ad920f9082afb6c78d0b5d6d4f8bd12e466
+  Parameters: {"commit"=>"Login", "login "=>"cody", "authenticity_token"=>"7d1ea2a97a7e23af76cc091fec09ca650dcd90f2", "action"=>"create", "controller"=>"sessions", "password"=>"password"}
+  [4;36;1mUser Load (0.000088)[0m   [0;1mSELECT * FROM users WHERE (users."password" = 'password' AND users."login" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.00681 (146 reqs/sec) | Rendering: 0.00248 (36%) | DB: 0.00009 (1%) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-02-16 17:55:07) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNzM5OWU5MDg3ZjZmZjIyYTUyMzU5YjNlOTdjM2Ux%0AYmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72e13ad920f9082afb6c78d0b5d6d4f8bd12e466
+  Parameters: {"commit"=>"Login", "login "=>"cody", "authenticity_token"=>"7d1ea2a97a7e23af76cc091fec09ca650dcd90f2", "action"=>"create", "controller"=>"sessions", "password"=>"password"}
+  [4;36;1mUser Load (0.000087)[0m   [0;1mSELECT * FROM users WHERE (users."login" IS NULL AND users."password" = 'password') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.00661 (151 reqs/sec) | Rendering: 0.00240 (36%) | DB: 0.00009 (1%) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-02-16 17:56:34) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNzM5OWU5MDg3ZjZmZjIyYTUyMzU5YjNlOTdjM2Ux%0AYmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72e13ad920f9082afb6c78d0b5d6d4f8bd12e466
+  Parameters: {"commit"=>"Login", "login "=>"cody", "authenticity_token"=>"7d1ea2a97a7e23af76cc091fec09ca650dcd90f2", "action"=>"create", "controller"=>"sessions", "password"=>"password"}
+  [4;35;1mUser Load (0.000100)[0m   [0mSELECT * FROM users WHERE (users."login" IS NULL AND users."password" = 'password') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.03481 (28 reqs/sec) | Rendering: 0.00164 (4%) | DB: 0.00010 (0%) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-02-16 17:56:52) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNzM5OWU5MDg3ZjZmZjIyYTUyMzU5YjNlOTdjM2Ux%0AYmIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72e13ad920f9082afb6c78d0b5d6d4f8bd12e466
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"7d1ea2a97a7e23af76cc091fec09ca650dcd90f2", "action"=>"create", "controller"=>"sessions", "password"=>"password", "login"=>"cody"}
+  [4;36;1mUser Load (0.000127)[0m   [0;1mSELECT * FROM users WHERE (users."login" = 'cody' AND users."password" = 'password') LIMIT 1[0m
+Redirected to http://localhost:3000/stories
+Completed in 0.00388 (257 reqs/sec) | DB: 0.00013 (3%) | 302 Found [http://localhost/session]
+
+
+Processing StoriesController#index (for 127.0.0.1 at 2011-02-16 17:56:52) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlNzM5OWU5MDg3ZjZmZjIyYTUyMzU5YjNlOTdjM2Ux%0AYmI6DHVzZXJfaWRpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--268b075007281d3c00de0617142cae4a66daaac1
+  Parameters: {"action"=>"index", "controller"=>"stories"}
+  [4;35;1mUser Load (0.000116)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;36;1mStory Load (0.000167)[0m   [0;1mSELECT * FROM stories ORDER BY RANDOM() LIMIT 1[0m
+Rendering template within layouts/application
+Rendering stories/index
+Completed in 0.00882 (113 reqs/sec) | Rendering: 0.00323 (36%) | DB: 0.00028 (3%) | 200 OK [http://localhost/stories]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2011-02-16 17:58:13) [DELETE]
+  Session ID: BAh7CDoMY3NyZl9pZCIlNzM5OWU5MDg3ZjZmZjIyYTUyMzU5YjNlOTdjM2Ux%0AYmI6DHVzZXJfaWRpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxh%0Ac2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--268b075007281d3c00de0617142cae4a66daaac1
+  Parameters: {"authenticity_token"=>"7d1ea2a97a7e23af76cc091fec09ca650dcd90f2", "_method"=>"delete", "action"=>"destroy", "controller"=>"sessions"}
+  [4;35;1mUser Load (0.000108)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/destroy
+Completed in 0.00477 (209 reqs/sec) | Rendering: 0.00116 (24%) | DB: 0.00011 (2%) | 200 OK [http://localhost/session]
