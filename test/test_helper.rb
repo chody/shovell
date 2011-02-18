@@ -33,6 +33,13 @@ class Test::Unit::TestCase
   # Note: You'll currently still have to declare fixtures explicitly in integration tests
   # -- they do not yet inherit this setting
   fixtures :all
+  
+  def get_with_user(action, parameters = nil, session = nil, flash = nil)
+    get action, parameters, :user_id => users(:cody).id
+  end
+  def post_with_user(action, parameters = nil, session = nil, flash = nil)
+    post action, parameters, :user_id => users(:cody).id
+  end
 
   # Add more helper methods to be used by all tests here...
 end

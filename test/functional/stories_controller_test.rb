@@ -9,17 +9,17 @@ class StoriesControllerTest < ActionController::TestCase
     assert_not_nil (:story)
   end
   def test_should_show_new
-    get :new
+    get_with_user :new
     assert_response :success
     assert_template 'new'
     assert_not_nil assigns(:story)
   end
   def test_should_show_new_form
-    get :new
+    get_with_user :new
     assert_select 'form p', :count =>3
   end
   def test_should_add_story
-    post :create, :story => {
+    post_with_user :create, :story => {
       :name => 'Test Story',
       :link => 'http://www.test.com'
     }
@@ -28,7 +28,7 @@ class StoriesControllerTest < ActionController::TestCase
     assert_not_nil flash[:notice]
   end
   def test_should_reject_missing_story_attribute
-    post :create, :story=> { :name => 'story without a link' }
+    post_with_user :create, :story=> { :name => 'story without a link' }
     assert assigns(:story).errors.on(:link)
   end
   def test_should_show_story
@@ -41,6 +41,35 @@ class StoriesControllerTest < ActionController::TestCase
       assert_select 'h2 span#vote_score'
       assert_select 'ul#vote_history li', :count => 2
       assert_select 'div#vote_form form'
+    end
+    def test_should_show_story_submitter
+      get :show, :id => stories(:one)
+      assert_select 'p.submitted_by span', 'cody'
+    end
+    def test_should_indicate_not_logged_in
+      get :index
+      assert_select 'dif#login_logout em', 'Not logged in.'
+    end
+    def test_should_show_navigation_menu
+      get :index
+      assert_select 'ul#navigation li', 2
+    end
+    def test_should_indicate_logged_in_user
+      get_with_user :index
+      assert_equal users(:cody), assigns(:current_user)
+      assert_select 'div#login_logout em a', '(Logout)'
+    end
+    def test_should_redirect_if_not_logged_in
+      get :new
+      assert_response :redirect
+      assert_redirected_to_new_session_path
+    end
+    def test_should_store_user_with_story
+      post_with_user :create, :story => {
+        :name => 'story with user',
+        :link => 'http://www.story-with-user.com'
+      }
+      assert_equal users(:cody), assigns(:story).user
     end
 end
 

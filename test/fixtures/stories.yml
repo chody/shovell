@@ -3,8 +3,9 @@
 one:
   name: My shiney weblog.
   link: http://poocs.net
+  user: cody
 
 two:
   name: SitePoint Forums
   link: http://www.sitepoint.com/forums
-
+  user: cody

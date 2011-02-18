@@ -9,7 +9,12 @@ class SessionsController < ApplicationController
 
     if @current_user
       session[:user_id] = @current_user.id
-      redirect_to stories_path
+      if session[:return_to]
+        redirect_to session[:return_to]
+        session[:return_to] = nil
+      else
+        redirect_to stories_path
+      end
     else
       render :action => 'new'
     end

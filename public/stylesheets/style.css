@@ -63,3 +63,27 @@ body {
 	color: #999;
 	font-size: smaller;
 }
+
+#navigation{
+	list-style: none;
+	padding: 5px 0;
+	margin: 0;
+	text-align: center;
+}
+
+#navigation li {
+	display: inline;
+	padding: 0 5px;
+}
+
+#navigation li a {
+	color: #fff;
+}
+
+.story { 
+	float: left;
+	width: 50%;
+	}
+
+.story h3 { margin-bottom: 0; }  
+.story p { color: #666; }

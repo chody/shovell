@@ -5,13 +5,16 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password
       t.string :name
       t.string :email
-
+      t.string :stories
+      t.integer :user_id
+  
+      
       t.timestamps
     end
   end
   
-  add_column :stories, :user_id, :integer
-  add_column :votes, :user_id, :integer
+  #add_column :stories, :user_id, :integer
+  #add_column :votes, :user_id, :integer
 
   def self.down
     drop_table :users

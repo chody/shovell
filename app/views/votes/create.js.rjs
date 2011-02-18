@@ -1,4 +1,5 @@
-page.replace_html 'vote_score', "Score: #{@story.votes.size}"
+page.replace_html 'vote_score', "Score: #{@story.reload.votes.size}"
 page[:vote_score].visual_effect :highlight
 page[:vote_history].replace_html :partial => 'vote',
     :collection => @story.votes.latest
+  
